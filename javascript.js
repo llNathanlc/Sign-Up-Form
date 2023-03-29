@@ -1,6 +1,7 @@
 let inputs = document.querySelectorAll('input');
 let userPassword = document.getElementById('user-password');
 let userConfirmPassword = document.getElementById('user-confirmPassword');
+let signupButton = document.getElementById('signup');
 
 
 Array.from(inputs).forEach(e => {
@@ -12,7 +13,7 @@ Array.from(inputs).forEach(e => {
 });
 const div = document.createElement('div');
 div.textContent = "* Passwords do not match";
-div.setAttribute('style', 'font-size:10px; color: red;')
+div.setAttribute('style', 'font-size:10px; color: red; padding-top:1px;')
 userConfirmPassword.addEventListener('keyup', function () {
     if (this.value.length == 0 && userPassword.value.length == 0) {
         this.classList.remove('invalid'); this.classList.remove('valid');
@@ -55,3 +56,10 @@ userPassword.addEventListener('keyup', function () {
         userPassword.parentNode.removeChild(div);
     }
 });
+
+signupButton.addEventListener('click', function(){
+    Array.from(inputs).forEach(e => {
+        if (e.checkValidity() == true) { e.classList.remove('invalid'); e.classList.add('valid'); }
+        else if (e.checkValidity() == false) { e.classList.remove('valid'); e.classList.add('invalid'); }
+    });
+})
