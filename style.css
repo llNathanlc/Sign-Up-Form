@@ -128,15 +128,14 @@ table {
     border-collapse: collapse;
     border-spacing: 0;
 }
-
+:root{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
 @font-face {
     font-family: Norse-bold;
-    src: url(resources/Norse-bold);
+    src: url(resources/Norse-bold.otf);
 }
 
-:root {
-    font-family: Norse-bold, sans-serif;
-}
 
 .main {
     display:flex;
@@ -206,8 +205,8 @@ legend {
     height:5.5rem;
 }
 #ODIN{
-    font-size: 3rem;
-    letter-spacing: -0.3rem;
+    font-size: 4rem;
+    font-family: Norse-bold;
 }
 .header{
     display: flex;
@@ -244,6 +243,24 @@ fieldset{
     flex-direction: column;
     gap:1.5rem;
 }
+input{
+    border: #E5E7EB 1px solid;
+    border-radius: 4px;;
+}
+input:focus{
+    border: rgba(0, 170, 255) 1px solid;
+    outline: rgba(0, 170, 255) 1px solid;
+    box-shadow: 1px 1px 3px grey;
+}
+.valid{
+   border:green 1px solid;
+   outline:green 1px solid;
+}
+.invalid{
+    border:red 1px solid;
+    outline:red 1px solid;
+}
+
 @media screen and (max-width: 991px) {
     .leftside {
       width: 100%;

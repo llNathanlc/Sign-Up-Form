@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <script href="javascript.js"></script>
+    <script src="javascript.js" defer></script>
     <title>Sign-up Form</title>
 </head>
 
@@ -52,17 +52,19 @@
                             </div>
                             <div>
                                 <label id="user-phone">PHONE</label>
-                                <input type="text" id="user-phone" name="user-phone" required>
+                                <input type="text" id="user-phone" name="user-phone" required pattern="(([\+])?(\d{2})?\d{9})"
+                                title="Enter a valid phone number, Example: +00 123 456 789 (no spaces)" >
                             </div>
                         </div>
                         <div>
                             <div>
-                                <label id="user-password">PASSWORD</label>
-                                <input type="password" id="user-password" name="user-password" required>
+                                <label id="password">PASSWORD</label>
+                                <input type="password" id="user-password" name="password" required minlength="3" maxlength="10"
+                                title="Password must be between 3 and 10 characters">
                             </div>
                             <div>
-                                <label id="user-confirmPassword">CONFIRM PASSWORD</label>
-                                <input type="password" id="user-confirmPassword" name="user-confirmPassword">
+                                <label id="confirmPassword">CONFIRM PASSWORD</label>
+                                <input type="password" id="user-confirmPassword" name="confirmPassword">
                             </div>
                         </div>
                     </div>
