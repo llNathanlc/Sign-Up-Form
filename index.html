@@ -22,12 +22,14 @@
         <div class="rightside">
             <div class="header">
                 <div>
-                    This is not a real online service! You know you need something like this in your life to help you
-                    realize
-                    your deepest dreams.
-                    Sign up <em>now</em> to get started.
+                    <div>
+                        This is not a real online service! You know you need something like this in your life to help you
+                        realize
+                        your deepest dreams.
+                    </div>
+                    <div>Sign up now to get started.</div>
                 </div>
-                <div>You <em>know</em> you want to.</div>
+                <div>You know you want to.</div>
             </div>
             <form action="/signed-in" method="post">
                 <fieldset>
@@ -36,27 +38,27 @@
                         <div>
                             <div>
                                 <label id="user-name">FIRST NAME</label>
-                                <input type="text" id="user-name" name="user-name">
+                                <input type="text" id="user-name" name="user-name" required>
                             </div>
                             <div>
                                 <label id="user-lastName">LAST NAME</label>
-                                <input type="text" id="user-lastName" name="user-lastName">
+                                <input type="text" id="user-lastName" name="user-lastName" required>
                             </div>
                         </div>
                         <div>
                             <div>
                                 <label id="user-email">EMAIL</label>
-                                <input type="email" id="user-email" name="user-email">
+                                <input type="email" id="user-email" name="user-email" required>
                             </div>
                             <div>
                                 <label id="user-phone">PHONE</label>
-                                <input type="text" id="user-phone" name="user-phone">
+                                <input type="text" id="user-phone" name="user-phone" required>
                             </div>
                         </div>
                         <div>
                             <div>
                                 <label id="user-password">PASSWORD</label>
-                                <input type="password" id="user-password" name="user-password">
+                                <input type="password" id="user-password" name="user-password" required>
                             </div>
                             <div>
                                 <label id="user-confirmPassword">CONFIRM PASSWORD</label>

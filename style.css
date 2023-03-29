@@ -139,27 +139,25 @@ table {
 }
 
 .main {
-    display: flex;
-    height: 99.8vh;
+    display:flex;
+    height:99.8vh;
     flex-wrap: wrap;
 }
 
 .box {
     box-shadow: 2px 2px 5px grey;
-    padding: 1rem;
     background-color: white;
 }
 .box>div {
     display: flex;
     flex-wrap: wrap;
+    padding:0.8rem;
+    gap:2rem;
 }
 
 .box>div div {
     display: flex;
     flex-direction: column;
-    padding-left: 2rem;
-    padding-top: 1rem;
-    padding-bottom: 1rem;
 }
 
 .box>div label {
@@ -171,13 +169,11 @@ table {
 
 legend {
     font-weight: bolder;
-    padding-left: 2rem;
     color:rgb(74, 74, 74);
 }
 
 .rightside {
     display: flex;
-    width: 65%;
     flex-direction: column;
     justify-content: center;
     background-color: rgb(243, 243, 243);
@@ -188,10 +184,10 @@ legend {
     background-repeat: no-repeat;
     background-size: cover;
     color: white;
-    width: 35%;
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
+    gap:22.5rem;
 }
 
 #byHailee {
@@ -203,8 +199,6 @@ legend {
     display: flex;
     align-items: center;
     justify-content: center;
-    position:relative;
-    bottom: 24rem;
     padding: 0.5rem;
     background-color: rgba(0,0,0,0.5);
 }
@@ -216,18 +210,12 @@ legend {
     letter-spacing: -0.3rem;
 }
 .header{
-    width:31rem;
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
-    position: relative;
-    bottom:2.5rem;
     gap:1.6rem;
     font-weight: bold;
     line-height: 1.3rem;
-}
-.header,#signup,#already{
-    margin-left:3rem;
 }
 a{
     text-decoration: none;
@@ -255,4 +243,60 @@ fieldset{
     display: flex;
     flex-direction: column;
     gap:1.5rem;
+}
+@media screen and (max-width: 991px) {
+    .leftside {
+      width: 100%;
+      gap:2rem;
+      height:10rem;
+    }
+    .rightside{
+        align-items: center;
+        justify-content: flex-start;
+        height:100%;
+    }
+    fieldset{
+        align-items: center;
+    }
+    .box{
+        padding:1rem;
+    }
+    .header{
+        width:70%;
+        text-align: center;
+        margin:3rem;
+    }
+    .box>div {
+        justify-content: center;
+    }
+    legend{
+        text-align: center;
+    }
+  }
+@media screen and (min-width: 992px) {
+    .leftside{
+        width:35%;
+    }  
+    .rightside{
+        width:65%;
+    }
+    .box{
+        padding:1rem;
+    }
+    .header,#signup,#already{
+        margin-left:3rem;
+    }
+    .box > div{
+        padding-left:2rem;
+    }
+    legend{
+        padding:0.5rem;
+        padding-left:2rem;
+    }
+    #byHailee{
+        padding-bottom:0.5rem;
+    }
+    .header{
+        margin-bottom:1.5rem;
+    }
 }
